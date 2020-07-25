@@ -1,0 +1,19 @@
+﻿@*
+     // _navbar.cshtml bir partial view
+    partial view _Layout.cshtml'den bu şekilde çağrılır  @Html.Partial("_navbar")
+    her sayfada olduğu için _Layout.cshtml ' e koyduk
+*@
+<div class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container">
+        <a href="/" class="navbar-brand">Movie App</a>
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a href="/login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+                <a href="/register" class="nav-link">Register</a>
+            </li>
+        </ul>
+    </div>
+</div>

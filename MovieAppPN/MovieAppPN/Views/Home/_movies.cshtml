@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Movie>
+
+@foreach (var movieListItem in Model)
+{
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/bootstrap/img/@movieListItem.ImageUrl" alt="@movieListItem.Description" class="card-img" />
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @*<a href="/home/details/@movieListItem.Id">  @movieListItem.Name </a>*@
+                        <a asp-controller="home" asp-action="Details"  asp-route-id="@movieListItem.Id"> @movieListItem.Name</a>
+                    </h5>
+                    <p class=" card-text">
+                        @movieListItem.ShortDescription
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted"> 1 gün önce </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@*
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/bootstrap/img/1.jpg" class="card-img"/>
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title"> merhaba film 1  </h5>
+                    <p class=" card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                        Lorem Ipsum passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted"> 1 gün önce </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/bootstrap/img/2.jpg" class="card-img" />
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title"> merhaba film 2  </h5>
+                    <p class=" card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                        Lorem Ipsum passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted"> 1 gün önce </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/bootstrap/img/3.jpg" class="card-img" />
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title"> merhaba film 3  </h5>
+                    <p class=" card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                        Lorem Ipsum passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted"> 1 gün önce </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ *@

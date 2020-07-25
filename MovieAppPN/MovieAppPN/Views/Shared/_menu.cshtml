@@ -1,0 +1,28 @@
+﻿@*
+        //_menu.cshtml bir partial view
+    partial view Index.cshtml'den bu şekilde çağrılır
+          @Html.Partial("_menu")
+        sadece Index yani ana sayfada olduğu için Index.cshtml'e koyduk'
+*@
+@*// partial view olan  _menu.cshtml'yi viewcomponent yaptık'*@
+@*@model IEnumerable<Category>
+    <div class="list-group">
+        @foreach (var CategoryItem in Model)
+        {
+            <a asp-controller="Home" asp-action="Index" asp-route-id="@CategoryItem.Id"
+               class="list-group-item list-group-item-action">@CategoryItem.Name  </a>
+        }
+    </div>*@
+
+@*<a class="list-group-item list-group-item-action">
+        link 2
+    </a>
+    <a class="list-group-item list-group-item-action">
+        link 3
+    </a>
+    <a class="list-group-item list-group-item-action">
+        link 4
+    </a>
+    <a class="list-group-item list-group-item-action">
+        link 5
+    </a>*@

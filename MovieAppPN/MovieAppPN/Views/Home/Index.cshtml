@@ -1,0 +1,20 @@
+﻿
+@*@model MovieCategoryModel*@
+@model IEnumerable<Movie>
+<div class="row">
+    <div class="col-md-3">
+        @*@Html.Partial("_menu",Model.Categories)*@
+        @*// _menu.cshtml bir partial view*@
+
+        @*// _menu.cshtml bir viewComponent Yaptık*@
+        @*// aynı yapıyı Home /Details çağıralım*@ 
+        @*// buradaki kodu _Layout.cshtml'nin içine taşıdık'*@
+        @await Component.InvokeAsync("CategoryMenu")
+
+    </div>
+    <div class="col-md-9">
+        @*@Html.Partial("_movies", Model)*@
+        <partial name="_movies" model="Model" />
+        @*// _movies.cshtml bir partial view*@
+    </div>
+</div>

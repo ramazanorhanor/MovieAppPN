@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Movie App</title>
+
+    <link href="~/bootstrap/css/Style.css" rel="stylesheet" />
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        @*@await Component.InvokeAsync("CategoryMenu")*@
+        @*// fakat biz menü'nün her yerde olmasını istemediğimiz için buraya koymak yanlış oalcak '*@
+
+        @Html.Partial("_navbar")
+        @*// _navbar bir partial view*@
+    </header>
+    <main>
+        <div class="container mt-4">
+            @RenderBody()
+            @*// burası HomeController Altındaki Index.csHtml'yi çağırır *@
+        </div>
+    </main>
+    <footer>
+        @Html.Partial("_footer")
+        @*// _footer bir partial view*@
+    </footer>
+
+</body>
+</html>
